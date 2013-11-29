@@ -1,0 +1,37 @@
+{
+	"name": {
+		"message": "Playlist Exporter",
+		"description": "The title of the application, displayed in the web store."
+	},
+	"desc": {
+		"message": "Exportateur de playlists.", 
+		"description":"The description of the application, displayed in the web store."
+	},
+	"button": {
+		"message": "Exporter"
+	},
+	"track": {
+		"message": "Piste"
+	},
+	"song": {
+		"message": "Titre"
+	},
+	"artist": {
+		"message": "Artiste"
+	},
+	"album": {
+		"message": "Album"
+	},
+	"time": {
+		"message": "Duree"
+	},
+	"output": {
+		"message": "Format du fichier de sortie : "
+	},
+	"btnsave": {
+		"message": "Enregistrer"
+	},
+	"saved": {
+		"message": "Option enregistr\xE9e."
+	}
+}
