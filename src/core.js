@@ -13,7 +13,7 @@ insertBtn();
 // Insert button "Extract"
 function insertBtn() {
 	if($('#naboo_datagrid_listen').length != 0 && ($('#pExport').length == 0)) {
-		var link = $('<a id="pExport" class="btn" style="display: inline-block; margin-left: 10px;"><i class="icon_export"></i>&nbsp;&nbsp;' + pExport.texts.button + '</a>');
+		var link = $('<a id="pExport" class="btn btn-default" style="display: inline-block; margin-left: 10px;"><i class="icon_export"></i>&nbsp;&nbsp;' + pExport.texts.button + '</a>');
 		link.insertAfter('#naboo_datagrid_listen');
 		link.children('i').css('background-image', 'url("' + $('#pExport-Img').attr('src') + '")');
 	}
@@ -23,7 +23,7 @@ function insertBtn() {
 
 // Prepare data for download
 function UpdateButton() {
-	var type = actual_box.split('/')[0];
+	var type = location.href.split('/')[3];
 	var idTitle;				// Title of the Id used for the output file
 	var output = pExport.output; // Type of output (CSV, groovylists)
 	var ext;					// File extension

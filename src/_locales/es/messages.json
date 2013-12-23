@@ -14,7 +14,7 @@
 		"message": "Pista"
 	},
 	"song": {
-		"message": "Título"
+		"message": "T\xEDtulo"
 	},
 	"artist": {
 		"message": "Artista"
@@ -23,7 +23,7 @@
 		"message": "Album"
 	},
 	"time": {
-		"message": "Duración"
+		"message": "Duraci\xF3n"
 	},
 	"output": {
 		"message": "Formato de archivo de salida : "
@@ -32,6 +32,6 @@
 		"message": "Registar"
 	},
 	"saved": {
-		"message": "Opción ahorrado."
+		"message": "Opci\xF3n ahorrado."
 	}
 }
