@@ -69,29 +69,29 @@ function retrievePlaylist(type, ext) {
 
 	// Browse current table
 	$('#' + tableref + ' table tbody tr.song').each(function(el) {
-			// Build object with all information
-			var muz = {
-				track: rewriting($(this).children('td.position').children('span.number').text().trim()),
-				song: rewriting($(this).children('td.track').children('div.text-ellipsis').children('a').text().trim()),
-				artist: type == 'album' ? rewriting($('#naboo_album_artist').children('a').text()) : rewriting($(this).children('td.artist').children('div.text-ellipsis').children('a').text().trim()),
-				album: rewriting($(this).children('td.album').children('div.text-ellipsis').children('a').text().trim()),
-				time: $(this).children('td.length').text().trim()
-			};
+		// Build object with all information
+		var muz = {
+			track: rewriting($(this).children('td.position').find('span.number').text().trim()),
+			song: rewriting($(this).children('td.track').find('div.ellipsis').children('a').text().trim()),
+			artist: type == 'album' ? rewriting($('#naboo_album_artist').children('a').text()) : rewriting($(this).children('td.artist').children('div.ellipsis').children('a').text().trim()),
+			album: rewriting($(this).children('td.album').children('div.ellipsis').children('a').text().trim()),
+			time: $(this).children('td.length').text().trim()
+		};
 
-			// Add the wanted information
-			if(ext == "csv") {
-				switch(type) {
-					case "album":
-						file += muz.track + ";" + muz.song + ";" + muz.time + "\n";
-						break;
+		// Add the wanted information
+		if(ext == "csv") {
+			switch(type) {
+				case "album":
+					file += muz.track + ";" + muz.song + ";" + muz.time + "\n";
+					break;
 
-					default: // playlist
-						file += muz.song + ";" + muz.artist + ";" + muz.album + ";" + muz.time + "\n";
-				}
-			} else {
-				file += muz.artist + " - " + muz.song + "\r\n";
+				default: // playlist
+					file += muz.song + ";" + muz.artist + ";" + muz.album + ";" + muz.time + "\n";
 			}
-		});
+		} else {
+			file += muz.artist + " - " + muz.song + "\r\n";
+		}
+	});
 
 	return encodeURIComponent(file);
 }
