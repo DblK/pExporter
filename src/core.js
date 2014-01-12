@@ -13,7 +13,7 @@ insertBtn();
 // Insert button "Extract"
 function insertBtn() {
 	if($('#naboo_datagrid_listen').length != 0 && ($('#pExport').length == 0)) {
-		var link = $('<a id="pExport" class="btn btn-default" style="display: inline-block; margin-left: 10px;"><i class="icon_export"></i>&nbsp;&nbsp;' + pExport.texts.button + '</a>');
+		var link = $('<a id="pExport" class="btn btn-default" style="display: inline-block; margin-left: 10px;"><i class="icon_export" style="margin-right: 10px;"></i>' + pExport.texts.button + '</a>');
 		link.insertAfter('#naboo_datagrid_listen');
 		link.children('i').css('background-image', 'url("' + $('#pExport-Img').attr('src') + '")');
 	}
