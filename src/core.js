@@ -62,7 +62,7 @@ function retrievePlaylist(type, ext) {
 			if(ext == "csv") {
 				file = pExport.texts.song + ";" + pExport.texts.artist + ";" + pExport.texts.album + ";" + pExport.texts.time + "\n";
 			}
-			tableref = 'tab_tracks_content';
+			tableref = 'tab_track_list_content';
 			break;
 		default:
 	}
